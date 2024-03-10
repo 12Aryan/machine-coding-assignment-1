@@ -5,10 +5,10 @@ export const ItemSlice = createSlice({
   initialState: {
     selectedItems: [],
     data: [
-      { id: 1, itemName: "item 1", itemType: "normal" },
-      { id: 2, itemName: "item 2", itemType: "taxable" },
-      { id: 3, itemName: "item 3", itemType: "discountable" },
-      { id: 4, itemName: "item 1", itemType: "taxable & discountable" },
+      { id: 1, itemName: "item 1", itemType: "normal", price : 0, quantity: 0 , amount: 0},
+      { id: 2, itemName: "item 2", itemType: "taxable",  price : 0, quantity: 0, amount: 0 },
+      { id: 3, itemName: "item 3", itemType: "discountable",  price : 0, quantity: 0, amount: 0},
+      { id: 4, itemName: "item 1", itemType: "taxable & discountable",  price : 0, quantity: 0, amount: 0 },
     ],
   },
   reducers: {

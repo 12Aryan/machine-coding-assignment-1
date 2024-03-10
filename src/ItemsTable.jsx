@@ -21,13 +21,21 @@ const ItemsTable = () => {
           </tr>
         </thead>
         <tbody>
-        {data.map((item, index)=>(
+        {data && data.length >0 && data.map((item, index)=>(
             <tr key={index} onClick={()=>handleItemClick(item, index)} style={{cursor: 'pointer'}}>
                 <td>{item.id}</td>
                 <td>{item.itemName}</td>
                 <td>{item.itemType}</td>
+                <td>{item.price}</td>
+                <td>{item.quantity}</td>
             </tr>
         ))}
+
+        {data && data.length ===0 && 
+            <tr  style={{cursor: 'pointer'}}>
+                <td>No data found</td>
+            </tr>
+        }
             
         </tbody>
       </table>
